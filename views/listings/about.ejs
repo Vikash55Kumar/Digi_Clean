@@ -1,0 +1,56 @@
+<% layout('/layouts/boilerplate') %>
+<style>
+    .form {
+        padding-bottom: 2rem;
+    }
+    .about {
+        padding: 2rem;
+    }
+    .about >p {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+        margin: 5rem 10rem;
+        /* background-color: gainsboro; */
+    }
+    h3 {
+        font-size: 3rem;
+        padding: 2rem;
+        text-align: center;
+}
+</style>
+
+<form action="/about" method="POST" class="form">
+    <h3>About Us</h3>
+    <div class="about">
+        <div>
+            <h4>Welcome to Degiclean – Turning Waste into Value</h4>
+            <p>Degiclean is a transformative platform dedicated to reducing waste 
+                and promoting sustainability. By connecting individuals with 
+                companies interested in recycling and repurposing waste materials like plastic, 
+                thermocol, iron, organic waste, and more, Degiclean offers a simple and effective 
+                solution to environmental challenges. Whether you're looking to sell your scrap or 
+                buy recycled materials, Degiclean is your go-to platform for waste trading.
+            </p>
+        </div>
+        <div>
+            <h4>Why Choose Degiclean?</h4>
+            <ul>
+                <li>Product Listings: Easily list your waste materials for sale or browse available listings to find what you need.</li>
+                <li>Real-Time Communication: Chat with potential buyers or sellers directly through our platform, making it easy to negotiate and close deals.</li>
+                <li>Daily Market Insights: Get the latest updates on market trends, including price fluctuations for different waste materials.</li>
+                <li>Community and Support: Join a growing community of environmentally conscious individuals and businesses. Our support team is always here to help you navigate the platform.</li>
+            </ul>
+        </div>
+        <div>
+            <h4>Join Degiclean Today!</h4>
+            <p>Whether you're a business looking to purchase recycled materials or an 
+                individual looking to sell waste products, Degiclean is the platform for you. 
+                Together, we can create a cleaner, greener future by turning waste into valuable 
+                resources. Sign up now to start trading and make a positive impact on the environment.
+            </p>
+        </div>
+    </div>
+</form>

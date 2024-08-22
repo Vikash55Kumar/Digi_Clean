@@ -9,18 +9,11 @@
             novalidate 
             class="needs-validation"
             enctype="multipart/form-data">
+            
             <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
+                <label for="title" class="form-label">Product Name</label>
                 <input name="listing[title]" class="form-control" value="<%= listing.title%>" type="text" 
                 required>
-            </div>
-
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea name="listing[description]" class="form-control" required><%= listing.description%></textarea>
-                <div class="invalid-feedback">
-                    please enter short discription
-                </div>
             </div>
 
             <div class="mb-3">
@@ -35,6 +28,25 @@
                 <input name="listing[image]" type="file" class="form-control"  >
             </div>
 
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="title" class="form-label">Quantity</label>
+                    <input name="listing[quantity]" placeholder="In Ton - 50" type="text" value="<%= listing.quantity%>" class="form-control"
+                    required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>  
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="title" class="form-label">Category</label>
+                    <input name="listing[category]" placeholder="Category" type="text" value="<%= listing.category%>" class="form-control"
+                    required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div> 
+           </div>
+
            <div class="row">
                 <div class="mb-3 col-md-4">
                     <label for="price" class="form-label">Price</label>
@@ -42,7 +54,7 @@
                     >
                 </div>
                 <div class="mb-3 col-md-8">
-                    <label for="country" class="form-label">Country</label>
+                    <label for="country" class="form-label">Location</label>
                     <input name="listing[location]" class="form-control" value="<%= listing.location%>" type="text" 
                     required>
                     <div class="invalid-feedback">
@@ -52,8 +64,8 @@
            </div>
                   
             <div class="mb-3">
-                <label for="location" class="form-label">Location</label>
-                <input name="listing[country]" class="form-control" value="<%= listing.country%>" type="text" 
+                <label for="location" class="form-label">Country</label>
+                <input name="listing[country]" class="form-control" value=" <%=listing.country%>" type="text" 
                 required>
                 <div class="invalid-feedback">
                     enter valid location

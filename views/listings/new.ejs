@@ -10,27 +10,37 @@
             enctype="multipart/form-data"
         >
             <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input name="listing[title]" placeholder="Creative Title" type="text" class="form-control"
+                <label for="title" class="form-label">Product Name</label>
+                <input name="listing[title]" placeholder="plastic, iron, rubber" type="text" class="form-control"
                 required>
-            <div class="valid-feedback">
-                Looks good!
-            </div>
-            </div>
-            
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea name="listing[description]"  class="form-control" required></textarea>
-            <div class="invalid-feedback">
-                please enter short discription
-            </div>       
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
             </div>
 
             <div class="mb-3">
-                <label for="image" class="form-label">Upload Listing Image </label>
+                <label for="image" class="form-label">Upload Product Image </label>
                 <input name="listing[image]" type="file" class="form-control">
-                required
             </div>
+
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="title" class="form-label">Quantity</label>
+                    <input name="listing[quantity]" placeholder="In Ton - 50" type="text" class="form-control"
+                    required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>  
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="title" class="form-label">Category</label>
+                    <input name="listing[category]" placeholder="Category" type="text" class="form-control"
+                    required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div> 
+           </div>
 
            <div class="row">
                 <div class="mb-3 col-md-4">

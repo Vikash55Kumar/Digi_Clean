@@ -1,8 +1,7 @@
 const express=require("express");
 const router=express.Router();
 const WrapAsync=require("../Utils/WrapAsync.js");
-const Listing=require("E:/Kumar/Project Management/models/listing.js");
-//to require or link 1-function-name, 2-filename
+const Listing = require("../models/listing.js")
 const {isLoggedIn, isOwner, validateListing}=require("../middelware.js");
 
 const ListingController=require("../controllers/listing.js");
@@ -39,6 +38,17 @@ router
 
 // Edit Route
 router.get("/:id/edit", isLoggedIn, isOwner, WrapAsync(ListingController.renderEditForm));
+
+router.put('/listings/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const updatedListing = await Listing.findByIdAndUpdate(id, req.body.listing, { new: true });
+        res.redirect(`/listings/${updatedListing._id}`);
+    } catch (err) {
+        console.error("Error updating listing:", err);
+    }
+});
+
 
 module.exports = router;
 

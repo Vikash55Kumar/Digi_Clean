@@ -1,6 +1,6 @@
 const User=require("../models/user");
 module.exports.renderSignupForm=(req, res) => {
-    res.render("E:/Kumar/Project Management/views/users/signup.ejs");
+    res.render("../views/users/signup.ejs")
 };
 
 module.exports.Signup=async(req, res) => {
@@ -43,6 +43,3 @@ module.exports.Logout=(req, res, next) => {
         res.redirect("/listings");
     });
 };
-
-
-

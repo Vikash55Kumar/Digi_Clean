@@ -1,8 +1,14 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-height: 100vh;
 }
 nav {
 	width: 100%;
@@ -26,8 +32,20 @@ nav {
 }
 
 /* footer */
+.f-info {
+    text-align: center;
+    margin-top: auto;
+    padding: 1rem;
+    height: 5rem;
+    background-color: rgba(233, 228, 228, 0.907);
+    display: flex;
+    /* flex-direction: column; */
+    flex: wrap;
+    justify-content: center;
+}
+
 .f-info-links a {
-    margin-right: 5px;
+    /* margin-right: 5px; */
     text-decoration: none;
     color: #222222;
 }
@@ -51,15 +69,6 @@ nav {
    
 } 
 
-.f-info {
-    text-align: center;
-    height: 5rem;
-    background-color: rgba(233, 228, 228, 0.907);
-    display: flex;
-    /* flex-direction: column; */
-    flex: wrap;
-    justify-content: center;
-}
 
 /* cards */
 .row{
@@ -132,7 +141,8 @@ nav {
 /* Map styling */
 #map { 
     height: 400px;
-    width: 80vh;
+    /* width: 80vh; */
+    width: 400px;
     }
 
 

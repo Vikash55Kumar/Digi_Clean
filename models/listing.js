@@ -6,7 +6,17 @@ const listingSchema=new Schema({
         type:String,
         required:true,
     },
-    description: String,
+    category: { 
+        type:String,
+        required:true,
+    },
+    quantity : {
+        type:Number,
+        required:true,
+    },
+    createdAt : {
+        type:Date,
+    },
     
     image: {
         url:String,
