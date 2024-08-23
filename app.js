@@ -92,6 +92,10 @@ app.get("/contact", (req, res) => {
     res.render("listings/contact");
 });
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);

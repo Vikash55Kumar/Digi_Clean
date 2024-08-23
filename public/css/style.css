@@ -72,12 +72,13 @@ nav {
 
 /* cards */
 .row{
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     padding: 1%;
 }
+
 .listing-card-f {
     border: none !important;
-    margin-left: 2rem;
+    margin-left: .6rem;
     width: 95%;
     
 }
@@ -141,9 +142,61 @@ nav {
 /* Map styling */
 #map { 
     height: 400px;
-    /* width: 80vh; */
-    width: 400px;
+    width: 85vh;
+}
+
+ /* Media query for larger screens */
+ @media (min-width: 300px) {
+    #map {
+        height: 180px;  /* Further increase height for extra-large screens */
+        width: 23Svh;
     }
+} 
+ @media (min-width: 330px) {
+    #map {
+        height: 200px;  /* Further increase height for extra-large screens */
+        width: 28vh;
+    }
+} 
+ @media (min-width: 420px) {
+    #map {
+        height: 200px;  /* Further increase height for extra-large screens */
+        width: 30vh;
+    }
+} 
+ @media (min-width: 570px) {
+    #map {
+        height: 200px;  /* Further increase height for extra-large screens */
+        width: 45vh;
+    }
+} 
+ @media (min-width: 767px) {
+    #map {
+        height: 200px;  /* Further increase height for extra-large screens */
+        width: 55vh;
+    }
+} 
+@media (min-width: 900px) {
+    #map {
+        height: 200px;  /* Further increase height for extra-large screens */
+        width: 55vh;
+    }
+} 
+ @media (min-width: 976px) {
+    #map {
+        height: 250px;  /* Further increase height for extra-large screens */
+        width: 65vh;
+    }
+} 
+
+/* Media query for extra-large screens */
+@media (min-width: 1200px) {
+    #map {
+        height: 300px;  /* Further increase height for extra-large screens */
+        width: 75vh;
+    }
+} 
+
 
 
 

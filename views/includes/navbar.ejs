@@ -1,31 +1,50 @@
 <style>
-  .search-btn{
-    background-color: #f8303e;
-    color: white;
-    border-radius: 25px;
-    padding: 0 1rem 0 1rem;
+  .navbar-collapse {
+    margin-top: .5rem;
+    background-color: rgb(249, 242, 242); /* Set the background color to light */
   }
-  .search-btn:hover {
-    background-color: #f8303e;
-    color: white;
+
+  .navbar-nav, .navbar-nav2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
-  .search-btn i{
-    display: inline;
+
+  .nav-link {
+    padding: .6rem;
+    text-align: left;
+    width: 100%;
+  }
+
+.navbar-brand i {
     margin-right: 0.5rem;
   }
-  .search-inp {
-    border-radius: 25px;
-    padding: .5rem 3rem;
+
+  @media (min-width: 768px) {
+    .navbar-nav {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+    .navbar-nav2 {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .navbar-nav2 .nav-link {
+      text-align: center;
+      width: auto;
+    }
   }
 </style>
 
-
+<!-- fa-solid  -->
 <nav class="navbar navbar-expand-md bg-body-light 
             boder-bottom sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/listings"><i class="fa-brands fa-slack"></i></a>
+      <a class="navbar-brand" href="/listings"><i class="fa-solid fa-mountain-city"></i></a>
       <button 
-        class="navbar-toggler" 
+        class="navbar-toggler bg-body-light" 
         type="button" 
         data-bs-toggle="collapse" 
         data-bs-target="#navbarNavAltMarkup" 
@@ -36,15 +55,9 @@
         <div class="navbar-nav">
           <a class="nav-link" href="/listings">DigiClean</a>
         </div>
-        <div class="navbar-nav ms-auto">
-          <form class="d-flex" role="search">
-            <input class="form-control search-inp me-2" type="search" placeholder="Search destinations" aria-label="Search">
-            <button class="btn search-btn" type="submit">
-              <i class="fa-solid fa-magnifying-glass"></i>Search</button>
-          </form>
-        </div>
       <!-- shift to right side mg-auto -->
-        <div class="navbar-nav ms-auto">
+        <div class="navbar-nav2 ms-auto">
+          <a class="nav-link" href="/about">About Us</a>
           <a class="nav-link" href="/contact">Contact Us</a>
           <a class="nav-link" href="/listings/new">Sell Post</a>
           <% if(!currUser) { %>

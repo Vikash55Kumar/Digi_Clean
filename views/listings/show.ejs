@@ -1,15 +1,14 @@
 <% layout('/layouts/boilerplate') %>
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const mapToken = "<%= process.env.MAP_TOKEN %>";
-        const listing = <%- JSON.stringify(listing).replace(/</g, '\\u003c').replace(/>/g, '\\u003e').replace(/&/g, '\\u0026') %>;
-        console.log(mapToken, listing); // Debugging
-    });
+    const mapToken="<%= process.env.MAP_TOKEN %>"
+    const coordinates = <%-JSON.stringify(listing.geometry.coordinates)-%>;
+    const title = "<%= listing.title %>"
 </script>
+
 <div class="row md-3">
     <div class="col-8 offset-3">
         <h3 style="align-items: center;">Product Details</h3>
-        <div class="card col-6 show-card listing-card">
+        <div class="card col-6 show-card listing-card" style="width: 100%;">
             <img src="<%= listing.image.url %>" class="card-img-top show-image" alt="listing_image">
         </div>    
         <div class="card-body">
@@ -82,10 +81,11 @@
             </div>
             <% } %>
         </div>
+        <hr>
         <% } %>
     </div>
     <div class="col-6 offset-3 mb-3">
-        <h3>Where you'll be</h3>
+        <h3>Where sell post created</h3>
         <div id="map"></div>
     </div>
 </div> 
