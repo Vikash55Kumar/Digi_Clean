@@ -7,6 +7,8 @@ const methodOverride=require("method-override");
 const ejsMate=require("ejs-mate");
 const ExpressError=require("./Utils/ExpressError.js");
 const MongoStore = require('connect-mongo');
+
+
 const flash=require("connect-flash");
 const passport=require("passport");
 const LocalStrategy=require("passport-local");
@@ -17,6 +19,7 @@ const User=require("./models/user.js");
 const listingRouter =require("./routers/listing.js");
 const reviewRouter =require("./routers/review.js");
 const userRouter =require("./routers/user.js");
+const googleRouter = require("./routers/google.js");
 
 // To connect env data base or require use process.env.(NAme)
 const dbUrl=process.env.ATLASDB_URL;
@@ -87,14 +90,28 @@ app.use((req, res, next) => {
 app.get("/about", (req, res) => {
     res.render("listings/about");
 });
+app.get("/price", (req, res) => {
+    res.render("listings/price");
+});
+
 
 app.get("/contact", (req, res) => {
     res.render("listings/contact");
 });
 
+app.get("/privacy", (req, res) => {
+    res.render("listings/privacy");
+});
+
+app.get("/terms", (req, res) => {
+    res.render("listings/terms");
+});
+
 app.get("/", (req, res) => {
     res.redirect("/listings");
 });
+
+app.use("/auth/google", googleRouter)
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);

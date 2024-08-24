@@ -1,30 +1,32 @@
-<% layout('/layouts/boilerplate') %>
+<% layout("/layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/auth.css">
+<body>
+    <div id="account-set-main">
+        <div id="account-set">
 
-<div class="row mt-3">
-    <h2 class="col-6 offset-3">Login</h2>
-    <br><br>
-
-    <div class="col-6 offset-3">
-        <form action="/login" method="POST" class="needs-validation" novalidate>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input 
-                    name="username" 
-                    id="username"
-                    type="text" 
-                    class="form-control"
-                    required/>
+            <h2>Login on DigiClean</h2>
+            <h4 class="mt-2 mb-3">Don't have an account? <a href="/signup">Sign Up</a></h4>
+            <div id="auth-account">
+                <a href="/auth/google">
+                    <img src="/icon/google.png" alt="">
+                    <div>Continue with Google&nbsp;&nbsp;&nbsp;</div>
+                </a>
+                <p class="mt-2">&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&nbsp;<b>Or</b>&nbsp;&boxh;&boxh;&boxh;&boxh;&boxh;&boxh;&nbsp;</p>
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input 
-                    name="password" 
-                    id="password" 
-                    type="text" 
-                    class="form-control"
-                    required/>
-            </div>
-            <button class="btn btn-success">Login</button>
-        </form>
+            <form action="/login" method="post" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group">
+                        <input id="username" type="text" placeholder="Enter Username" name="username" class="form-control border border-black border-opacity-50" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password" type="password" placeholder="Enter Password" name="password" class="form-control border border-black border-opacity-50" minlength="8" required>
+                </div>
+                <button class="btn btn-primary styleBtn">LogIn</button>
+            </form>
+            <br/><br/><br/>
+        </div>
     </div>
-</div>
+</body>

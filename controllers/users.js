@@ -8,8 +8,15 @@ module.exports.Signup=async(req, res) => {
         //extract form such as email, password, username
         let {username, email, password} = req.body;
         const newUser=new User({email, username});
+        
+        const existingUser = await User.findOne({ email: email, username:username });
+        if (existingUser) {
+            req.flash("error", "User already exists");
+            return res.redirect("/signup");
+        }
+
         const registeredUser= await User.register(newUser, password);
-        console.log(registeredUser);
+        
         req.login(registeredUser, (err) => {
             if(err) {
                 return next(err);

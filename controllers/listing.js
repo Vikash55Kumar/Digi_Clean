@@ -1,4 +1,5 @@
 const Listing=require("../models/listing");
+const Review = require("../models/review")
 // mapbox geocoding require
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
 const mapToken = process.env.MAP_TOKEN;
@@ -25,10 +26,9 @@ module.exports.showListing=async(req, res) => {
         })
       .populate("owner");
     if (!listing) {
-        req.flash("error", "Listing you request for does not exist");
+        req.flash("error", "Post you request for does not exist");
         res.redirect("/listings");
     }
-    console.log(listing);
     res.render("listings/show.ejs", {listing});
 }
 
@@ -51,7 +51,7 @@ module.exports.createListing=async (req, res, next) => {
 
     let saveListing=await newListing.save();
     console.log(saveListing);
-    req.flash("success", "New Listing Created");
+    req.flash("success", "New Post Created");
     res.redirect("/listings");
 };
 
@@ -59,7 +59,7 @@ module.exports.renderEditForm=async (req, res) => {
     let {id} = req.params;
     const listing=await Listing.findById(id);
     if (!listing) {
-        req.flash("error", "Listing you request for does not exist");
+        req.flash("error", "Post you request for does not exist");
         res.redirect("/listings");
     }
 //  change view image pixel or blur using cloudinary
@@ -77,7 +77,7 @@ module.exports.updateListing=async(req, res) => {
         let filename=req.filename;
         listing.image={url, filename};
         await listing.save();
-        req.flash("success", "Listing Edited");
+        req.flash("success", "Post Edited");
         res.redirect(`/listings/${id}`);
     }
     
@@ -87,6 +87,6 @@ module.exports.destroyListing=async(req, res) => {
     let {id} =req.params;
     let deletedListing=await Listing.findByIdAndDelete(id);
     console.log(deletedListing);
-    req.flash("success", "Listing Deleted");
+    req.flash("success", "Post Deleted");
     res.redirect("/listings");
 }

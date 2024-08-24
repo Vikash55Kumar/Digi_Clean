@@ -1,8 +1,27 @@
 <% layout('/layouts/boilerplate') %>
-<br>
-<h3 class="offset-2">Create a new Listing</h3>
-<div class="row">
-    <div class="col-8 offset-2">
+
+<style>
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+</style>
+
+<div class="form-container">
+    <div class="form-wrapper">
+        <h3>Create a new Listing</h3>
         <form 
             method="POST"  
             action="/listings" 
@@ -48,15 +67,15 @@
                     <input name="listing[price]" placeholder="12000" class="form-control" 
                     required>   <!-- type ="number" -->
                     <div class="invalid-feedback">
-                        enter valid price
+                        Enter valid price
                     </div>   
                 </div>
                 <div class="mb-3 col-md-8">
                     <label for="country" class="form-label">Country</label>
                     <input name="listing[country]" placeholder="India" type="text" class="form-control" required>
-                <div class="invalid-feedback">
-                    country should be valid
-                </div>
+                    <div class="invalid-feedback">
+                        Country should be valid
+                    </div>
                 </div> 
            </div>
                   
@@ -64,9 +83,9 @@
                 <label for="location" class="form-label">Location</label>
                 <input name="listing[location]" placeholder="Jodhpur, Gaya" type="text" class="form-control" 
                 required>
-            <div class="invalid-feedback">
-                Location should be valid
-            </div>
+                <div class="invalid-feedback">
+                    Location should be valid
+                </div>
             </div>
 
             <button class="btn btn-dark add-btn">Add</button>

@@ -1,27 +1,27 @@
-const { model } = require("mongoose");
-const Listing=require("../models/listing");
-const Review=require("../models/review.js");
+// reviews.js
+const Listing = require('../models/listing');
+const Review = require('../models/review'); // Ensure correct import path
 
-module.exports.createReview=async(req, res) => {
-    let listing= await Listing.findById(req.params.id);
-    let newReview= new Review(req.body.review);
-    newReview.author=req.user._id;
+module.exports.createReview = async (req, res) => {
+    let listing = await Listing.findById(req.params.id);
+    let newReview = new Review(req.body.review);
+    newReview.author = req.user._id;
     
     listing.reviews.push(newReview);
   
     await newReview.save();
     await listing.save();
 
-    req.flash("success", "New Review Created");
+    req.flash('success', 'New Review Created');
     res.redirect(`/listings/${listing._id}`);
 };
 
-module.exports.destroyReview=async (req, res)=> {
-    // access review and their id
-    let {id, reviewId} =req.params;
+module.exports.destroyReview = async (req, res) => {
+    let { id, reviewId } = req.params;
 
-    await Listing.findByIdAndUpdate(id, {$pull: {reviews: reviewId}});
+    await Listing.findByIdAndUpdate(id, { $pull: { reviews: reviewId } });
     await Review.findByIdAndDelete(reviewId);
-    req.flash("success", "Listing Deleted");
+
+    req.flash('success', 'Review Deleted');
     res.redirect(`/listings/${id}`);
 };

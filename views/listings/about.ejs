@@ -3,23 +3,79 @@
     .form {
         padding-bottom: 2rem;
     }
+
     .about {
         padding: 2rem;
+        animation: fadeIn 1.5s ease-in-out;
     }
-    .about >p {
+
+    .about > p, .about > div {
         display: flex;
         text-align: center;
         justify-content: center;
         flex-direction: column;
         padding: 2rem;
-        margin: 5rem 10rem;
-        /* background-color: gainsboro; */
+        margin: 3rem 5rem;
+        background-color: #f0f8ff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease;
     }
+
+    .about > p:hover, .about > div:hover {
+        background-color: #ffe4e1;
+        transform: scale(1.05);
+    }
+
     h3 {
         font-size: 3rem;
         padding: 2rem;
         text-align: center;
-}
+        color: #333;
+        background-color: #bdeeeb;
+        border-radius: 5px;
+        animation: bounce 2s infinite;
+    }
+
+    h4 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #4682b4;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        list-style-type: none;
+        padding: 0.5rem 0;
+        font-size: 1.2rem;
+        color: #444;
+    }
+
+    ul li::before {
+        content: '• ';
+        color: #ff6347;
+        font-size: 1.5rem;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-20px);
+        }
+        60% {
+            transform: translateY(-10px);
+        }
+    }
 </style>
 
 <form action="/about" method="POST" class="form">

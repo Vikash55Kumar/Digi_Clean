@@ -4,6 +4,13 @@
     const coordinates = <%-JSON.stringify(listing.geometry.coordinates)-%>;
     const title = "<%= listing.title %>"
 </script>
+<style>
+    .hr-half-width {
+        border: 0; 
+        border-top: 1px solid black; 
+        width: 15rem; 
+    }
+</style>
 
 <div class="row md-3">
     <div class="col-8 offset-3">
@@ -13,10 +20,15 @@
         </div>    
         <div class="card-body">
             <p class="card-text">Post by <i><%= listing.owner.username %></i></p>
+            <hr>
             <p>Product : <span style="font-size: large"><%= listing.title %> </p>
+            <hr class="hr-half-width">
             <p>Category : <%= listing.category %></p>
+            <hr class="hr-half-width">
             <p>Quantity : <%= listing.quantity %> Ton</p>
+            <hr class="hr-half-width">
             <p>Price : <span style="color: red;">₹ <%= listing.price %> /Kg</p>
+            <hr class="hr-half-width">
             <p>Location : <%= listing.location %>, <%= listing.country %></p>
         </div>
         

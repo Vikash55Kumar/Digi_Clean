@@ -1,0 +1,157 @@
+<% layout('/layouts/boilerplate') %>
+<style>
+    body {
+        background-color: #f5f5f5;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+    }
+
+    .form {
+        padding-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+        padding: 1.5rem;
+        text-align: center;
+        color: #fff;
+        background-color: #4CAF50;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        animation: colorShift 4s infinite;
+    }
+
+    .price {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2rem;
+    }
+
+    .price > div {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 1rem;
+        padding: 1.5rem;
+        flex-basis: 45%;
+        min-width: 280px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .price > div:hover {
+        background-color: #e0f7fa;
+        transform: scale(1.05);
+    }
+
+    .price h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .price ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .price li {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+        transition: color 0.3s ease;
+    }
+
+    .price li:hover {
+        color: #00796B;
+    }
+
+    .price li:last-child {
+        border-bottom: none;
+    }
+
+    .price li b {
+        color: #555;
+    }
+
+    .price li b:after {
+        content: ':';
+    }
+
+    @media (max-width: 768px) {
+        .price > div {
+            flex-basis: 100%;
+            min-width: 100%;
+        }
+
+        .price {
+            padding: 1rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
+    @keyframes colorShift {
+        0% { background-color: #eaa768; }
+        50% { background-color: #602222; }
+        100% { background-color: #46a0e0; }
+    }
+</style>
+
+<form action="/price" method="POST" class="form">
+    <h3>Price List</h3>
+    <div class="price">
+        <div>
+            <h4>Metal Waste:</h4>
+            <ul>
+                <li><b>Aluminum Cans</b> ₹70 per kilogram</li>
+                <li><b>Steel Cans</b> ₹12 per kilogram</li>
+                <li><b>Copper Wire</b> ₹250 per kilogram</li>
+                <li><b>Brass</b> ₹150 per kilogram</li>
+                <li><b>Stainless Steel</b> ₹70 per kilogram</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Paper Waste:</h4>
+            <ul>
+                <li><b>Office Paper</b> ₹4 - ₹8 per kilogram</li>
+                <li><b>Cardboard</b> ₹8 - ₹16 per kilogram</li>
+                <li><b>Newspaper</b> ₹4 - ₹6 per kilogram</li>
+                <li><b>Mixed Paper</b> ₹3 - ₹6 per kilogram</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Glass Waste:</h4>
+            <ul>
+                <li><b>Clear Glass</b> ₹4 - ₹8 per kilogram</li>
+                <li><b>Green Glass</b> ₹4 - ₹8 per kilogram</li>
+                <li><b>Brown Glass</b> ₹4 - ₹8 per kilogram</li>
+                <li><b>Mixed Glass</b> ₹2 - ₹4 per kilogram</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Plastic Waste:</h4>
+            <ul>
+                <li><b>Plastic Bottles (PET)</b> ₹10 per kilogram</li>
+                <li><b>Plastic Bags (LDPE)</b> ₹8 per kilogram</li>
+                <li><b>Plastic Containers (HDPE)</b> ₹15 per kilogram</li>
+                <li><b>Mixed Plastics</b> ₹8 per kilogram</li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Hazardous Waste:</h4>
+            <ul>
+                <li><b>Batteries</b> ₹16 - ₹40 per kilogram</li>
+                <li><b>Paint and Coatings</b> Varies widely; generally not priced per kilogram but by container volume or type</li>
+                <li><b>Medical Waste</b> Specialized pricing based on treatment and disposal requirements</li>
+                <li><b>Electronic Waste</b> ₹8 - ₹24 per kilogram for general electronics; specialized rates for components</li>
+            </ul>
+        </div>
+    </div>
+</form>

@@ -2,13 +2,14 @@
 <% layout('/layouts/boilerplate') %>
 
 <style>
+        
     #filters {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around; 
-    text-align: center; 
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
     }
 
     .filter {
@@ -18,45 +19,54 @@
         justify-content: center;
         margin: .5rem;
         opacity: 0.7;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
-    .filter:hover{
+
+    .filter:hover {
         opacity: 1;
         cursor: pointer;
+        transform: scale(1.05);
     }
+
     .filter p {
         font-size: .8rem;
     }
-    .toggle{
+
+    .toggle {
         text-align: center;
         margin: 1rem;
         opacity: 0.7;
         display: flex;
         justify-content: right;
+        transition: opacity 0.3s ease;
     }
-    .toggle:hover{
+
+    .toggle:hover {
         opacity: 1;
         cursor: pointer;
     }
+
     .tax-toggle {
         border: 1px solid black;
-        max-width: 270px;
+        max-width: 312px;
         border-radius: .8rem;
         height: 3rem;
         padding: .8rem;
         margin-left: 1rem;
     }
+
     .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .text::before,
     .text::after {
         content: "";
         flex: 1;
-        border-bottom: 2px solid #000; 
-        margin: 0 1rem; 
+        border-bottom: 2px solid #000;
+        margin: 0 1rem;
     }
 
     .text::before {
@@ -66,10 +76,78 @@
     .text::after {
         margin-left: 1rem;
     }
-    .listing-card-f {
-    margin-bottom: 20px; 
-}
 
+    .listing-card-f {
+        margin-bottom: 20px;
+    }
+
+    /* Card Styles */
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Listing Link */
+    .listing-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card-img-top {
+        height: 20rem;
+        object-fit: cover;
+    }
+
+    /* Footer Styles */
+    footer {
+        margin-top: 2rem;
+    }
+
+    .f-info {
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid #ddd;
+    }
+
+    .f-info-brands {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .f-info-links {
+        margin-top: 0.5rem;
+    }
+
+    .f-info-links a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+
+    .f-info-links a:hover {
+        color: #007bff;
+    }
+
+    /* Footer Stick to Bottom */
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: auto;
+    }
 </style>
 
 <div id="filters">
@@ -92,7 +170,7 @@
     <div class="tax-toggle">
         <div class="form-check form-switch form-check-reverse">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Display total after taxes </label>
+            <label class="form-check-label" for="flexSwitchCheckDefault">Bonus for every loady you Bring!</label>
           </div>
     </div>
 </div>
@@ -108,7 +186,7 @@
                     <b><span style="width: 40%;"><%= listing.title %></span></b> <br>
                     <%= listing.location %> , <%= listing.country %>  <br>
                     &#8377; <span style="color: red"><%= listing.price %> / Kg
-                    <i class="tax-info">&nbsp; &nbsp; +18% GST</i>
+                    <i class="tax-info">&nbsp; &nbsp; + ₹5</i>
                     </p>
                 </div>
             </div>
