@@ -1,13 +1,5 @@
-<h1 align="center">Hi 👋, I'm Vikash Kumar</h1>
-<h3 align="center">A passionate MERN developer from India</h3>
-<p>
-  <img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=vikash55kumar&" alt="vikash55kumar" width="400" height="200" />  &nbsp;
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=vikash55kumar&show_icons=true&locale=en" alt="vikash55kumar" width="400" height="200" />
-</p>
 
-## - 🔭 Projects Link: [DigiClean](https://digiclean.up.railway.app/)
-
-# Degiclean – Turning Waste into Value
+<h1 align="center"> Degiclean – Turning Waste into Value </h1>
 
 Degiclean is a transformative platform connecting individuals and businesses for sustainable waste management. Our mission is to create a positive environmental impact by offering a marketplace where recyclable materials can be bought and sold, reducing waste and promoting eco-friendly practices.
 
@@ -16,17 +8,21 @@ Whether you’re selling scrap like plastic, thermocol, iron, or organic waste, 
 
 ![DigiClean](https://github.com/user-attachments/assets/e27ab4ac-2409-4150-9fe3-3e9f80d6e097)
 
-## Why Choose DegiClean
+<h2 align="center"> Why Choose DegiClean </h2>
 
-**Product Listings:** Easily post waste materials for sale or browse through available listings to find what you need.
+<p>
 
-**Real-Time Communication:** Chat with buyers or sellers directly through the platform for hassle-free negotiation.
+- **Product Listings:** Easily post waste materials for sale or browse through available listings to find what you need.
 
-**Daily Market Insights:** Stay updated with the latest trends and price fluctuations in the recycling market.
+- **Real-Time Communication:** Chat with buyers or sellers directly through the platform for hassle-free negotiation.
 
-**Community and Support:** Join a network of eco-conscious individuals and businesses. Our dedicated support team is always here to help you.
+- **Daily Market Insights:** Stay updated with the latest trends and price fluctuations in the recycling market.
 
-<h3 align="left">Languages and Tools:</h3>
+- **Community and Support:** Join a network of eco-conscious individuals and businesses. Our dedicated support team is always here to help you.
+
+</p>
+
+<h2 align="left">Languages and Tools:</h2>
 
 <p align="left">
     <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="80" height="80"/> </a> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
@@ -37,11 +33,8 @@ Whether you’re selling scrap like plastic, thermocol, iron, or organic waste, 
   <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="80" height="80"/> </a> 
   </p>
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=vikash55kumar&show_icons=true&locale=en&layout=compact" alt="vikash55kumar" width="500" height="250"/></p>
 
-![hr](https://github.com/user-attachments/assets/e12ad308-74d5-4145-aba8-c9aeff03326e)
-
-## ScreenShots
+<h2 align="center"> ScreenShots </h2>
 
 ![digi Login](https://github.com/user-attachments/assets/fafcf00d-f831-49ec-a076-8d3ee6326977)
 
@@ -50,15 +43,16 @@ Whether you’re selling scrap like plastic, thermocol, iron, or organic waste, 
 ![digi map](https://github.com/user-attachments/assets/61fddf07-65cf-454b-9917-768740d39bc6)
 
 
-
-## Features
-
+<h2 align="center"> Features </h2>
+<p>
+  
 - **User Authentication:** Sign up and log in to access personalized features
 - **Post & Manage Listings:** Create, update, and delete posts for selling waste materials.
 - **Market Trends:** View daily insights and trends for different waste materials.
 
+</p>
 
-## How to Install and Run Locally
+<h2 align="center"> How to Install and Run Locally </h2>
 
 Clone the Repository::
 
@@ -97,15 +91,6 @@ GOOGLE_CALLBACK_URL="http://localhost:8080/auth/google/callback"
 
 ```
 
+## - 🔭 Projects Link: [DigiClean](https://digiclean.up.railway.app/)
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-  
-  [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://vikashmernportfolio.up.railway.app/)
-
-  [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/software-enginner-vikash)
-
-  - 📫 How to reach me:  **vikashcbsb@gmail.com**
-
-</p>
 
