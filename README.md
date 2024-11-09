@@ -91,7 +91,7 @@ GOOGLE_CALLBACK_URL="http://localhost:8080/auth/google/callback"
 
 ```
 
-## - 🔭 Projects Link: [DigiClean](https://digiclean.up.railway.app/)
+## - 🔭 Projects Link: [DigiClean](https://digi-clean.onrender.com)
 
 <div align="center"> 
   <a href="https://vikashmernportfolio.up.railway.app/contact">
